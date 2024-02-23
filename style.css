@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(#e9eafa, #a1a3c9);
+}
+.type {
+  display: flex;
+
+  padding-left: 20px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.todo {
+  width: 100%;
+  max-width: 520px;
+  background: #f6f7ff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 15px;
+}
+h1 {
+  margin-left: 13px;
+}
+
+button {
+  outline: none;
+  border: none;
+  margin-left: -35px;
+  padding: 16px 50px;
+  cursor: pointer;
+  color: #f6f7ff;
+  font-size: 16px;
+  position: relative;
+  left: 0px;
+  width: calc(100%-90%);
+  background-color: #a1a3c9;
+  border-radius: 30px;
+}
+input {
+  width: 350px;
+  outline: none;
+  border: none;
+  flex: 1;
+  border-radius: 30px;
+  padding: 15px;
+  background-color: #eff0fc;
+  font-size: 15px;
+}
+li {
+  padding-left: 15px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  position: relative;
+  list-style: none;
+}
+li:hover {
+  background-color: #eff0fc;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  background-image: url(img/cancel.png);
+  background-size: cover;
+}
+li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  height: 20px;
+  width: 20px;
+  background-image: url(img/tick.png);
+  background-size: cover;
+}
+ul li.checked {
+  text-decoration: line-through;
+  color: #949494;
+}
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 28px;
+  }
+  .todo {
+    margin: 70px auto 10px;
+    padding: 20px 10px 30px;
+  }
+  .type {
+    padding-left: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  input {
+    padding: 10px;
+    width: 250px;
+    font-size: 14px;
+  }
+  button {
+    width: 50px;
+    margin-left: -35px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
