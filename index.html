@@ -11,8 +11,17 @@
   <body>
     <div class="containers">
       <div class="todo">
-        <h1>to-Do-App</h1>
-
+        <div class="title">
+          <h1>to-Do-App</h1>
+          <button id="trash">
+            <img
+              src="img/delete.png"
+              height="30px"
+              width="30px"
+              alt="a delete icon"
+            />
+          </button>
+        </div>
         <div class="type">
           <input
             id="input_text"
@@ -20,11 +29,9 @@
             placeholder="Add your Task"
             focus
           />
-          <button>Add</button>
+          <button onclick="add_task()">Add</button>
         </div>
-        <ul id="tasks">
-          <li>xcccc</li>
-        </ul>
+        <ul id="tasks"></ul>
       </div>
     </div>
   </body>

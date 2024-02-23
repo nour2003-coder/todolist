@@ -16,24 +16,31 @@ body {
 }
 .type {
   display: flex;
-
   padding-left: 20px;
   margin-bottom: 25px;
   margin-top: 25px;
+}
+.containers {
+  margin-top: -10%;
 }
 .todo {
   width: 100%;
   max-width: 520px;
   background: #f6f7ff;
   margin: 100px auto 20px;
-  padding: 40px 30px 70px;
+  padding: 40px 20px 70px;
   border-radius: 15px;
 }
 h1 {
   margin-left: 13px;
 }
-
-button {
+#trash {
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+.type button {
   outline: none;
   border: none;
   margin-left: -35px;
@@ -58,7 +65,7 @@ input {
   font-size: 15px;
 }
 li {
-  padding-left: 15px;
+  padding-left: 30px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -66,25 +73,33 @@ li {
   position: relative;
   list-style: none;
 }
-li:hover {
-  background-color: #eff0fc;
-}
+/* li::after:hover {
+  
+} */
 
-li::after {
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+img {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.delete::before {
   content: "";
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: -20px;
   height: 20px;
   width: 20px;
   background-image: url(img/cancel.png);
   background-size: cover;
 }
-li::before {
+.checked::before {
   content: "";
   position: absolute;
   top: 10px;
-  right: 50px;
+  right: -20px;
   height: 20px;
   width: 20px;
   background-image: url(img/tick.png);
@@ -94,7 +109,7 @@ ul li.checked {
   text-decoration: line-through;
   color: #949494;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   h1 {
     font-size: 28px;
   }
@@ -112,7 +127,7 @@ ul li.checked {
     width: 250px;
     font-size: 14px;
   }
-  button {
+  .type button {
     width: 50px;
     margin-left: -35px;
     font-size: 13px;
