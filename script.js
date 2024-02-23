@@ -43,7 +43,7 @@ const displayTasks = (tasks) => {
 }
 
 const load = () => {
-    taskList.innerHTML = ""; // Clear existing task list before loading
+    taskList.innerHTML = ""; 
     const tasksJSON = localStorage.getItem('tasks');
     if (tasksJSON !== null) {
         const tasks = JSON.parse(tasksJSON);
